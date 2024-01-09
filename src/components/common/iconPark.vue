@@ -1,0 +1,16 @@
+<template>
+    <component :is="icon" :size="size" :fill="fill" />
+</template>
+
+<script setup lang="ts">
+import { defineProps } from "vue"
+import type { Icon } from "@icon-park/vue-next/lib/runtime";
+
+const { icon, size, fill } = defineProps<{
+    icon: Icon | undefined,
+    size?: number | string,
+    fill?: string | string[]
+}>()
+</script>
+
+<style scoped></style>

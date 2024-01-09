@@ -1,7 +1,10 @@
+import { Camera, Music, Video, Fm } from "@icon-park/vue-next";
+import type { Icon } from "@icon-park/vue-next/lib/runtime";
+
 declare interface IMenu {
     name: string;
     key: string;
-    icon?: any;
+    icon?: Icon;
 }
 
 declare interface IMenus {
@@ -17,22 +20,22 @@ export function useMenu(): IMenus[] {
                 {
                     name: "推荐",
                     key: "discover",
-                    icon: "",
+                    icon: Camera,
                 },
                 {
                     name: "音乐馆",
                     key: "music",
-                    icon: "",
+                    icon: Music,
                 },
                 {
                     name: "视频",
                     key: "video",
-                    icon: "",
+                    icon: Video,
                 },
                 {
                     name: "电台",
                     key: "dj",
-                    icon: "",
+                    icon: Fm,
                 }
             ]
         },
