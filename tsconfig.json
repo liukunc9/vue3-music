@@ -28,6 +28,7 @@
       "@views/*": ["./src/views/*"],
       "@components/*": ["./src/components/*"],
       "@router/*": ["./src/router/*"],
+      "@styles/*": ["./src/styles/*"],
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],

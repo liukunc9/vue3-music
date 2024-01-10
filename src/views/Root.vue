@@ -1,13 +1,15 @@
 <template>
     <div class="module">
-        <div class="module-left">
-            <Menu></Menu>
-        </div>
-        <div class="module-main">
-            <router-view></router-view>
-            <div class="module-footer">
-                <Footer></Footer>
+        <div class="module-top">
+            <div class="module-top-left">
+                <Menu></Menu>
             </div>
+            <div class="module-top-right">
+                <router-view></router-view>
+            </div>
+        </div>
+        <div class="module-bottom">
+            <Footer></Footer>
         </div>
     </div>
 </template>
@@ -19,14 +21,32 @@ import Footer from "@components/layout/footer/index.vue";
 </script>
 
 <style scoped lang="scss">
-$orangeColor: #f60;
-$greyColor: #f3f3f3;
+.module {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
-.box {
-    color: $orangeColor;
+    .module-top {
+        flex-grow: 1;
+        display: flex;
+        .module-top-left {
+            min-width: 180px;
+            display: flex;
+            flex-direction: column;
+            background-color: $menuBkColor;
+        }
+        
+        .module-top-right {
+            flex-grow: 1;
+            background-color: $contentPageBkColor;
+        }
+    }
 
-    ul li {
-        background: $greyColor;
+    .module-bottom {
+        height: 100px;
+        background-color: $bottomBkCollor;
+        border-top: 1px solid $splitLineColor;
     }
 }
 </style>

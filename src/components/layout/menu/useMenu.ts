@@ -1,4 +1,4 @@
-import { Camera, Music, Video, Fm } from "@icon-park/vue-next";
+import { Planet, Music, Video, Fm, Like } from "@icon-park/vue-next";
 import type { Icon } from "@icon-park/vue-next/lib/runtime";
 
 declare interface IMenu {
@@ -20,7 +20,7 @@ export function useMenu(): IMenus[] {
                 {
                     name: "推荐",
                     key: "discover",
-                    icon: Camera,
+                    icon: Planet,
                 },
                 {
                     name: "音乐馆",
@@ -41,7 +41,13 @@ export function useMenu(): IMenus[] {
         },
         {
             name: "我的音乐",
-            menus: []
+            menus: [
+                {
+                    name: "喜欢",
+                    key: "like",
+                    icon: Like,
+                }
+            ]
         }
     ]
 

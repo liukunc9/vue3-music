@@ -1,5 +1,5 @@
 <template>
-    <component :is="icon" :size="size" :fill="fill" />
+    <component :is="icon" :size="size" :fill="fill" class="icon" />
 </template>
 
 <script setup lang="ts">
@@ -13,4 +13,8 @@ const { icon, size, fill } = defineProps<{
 }>()
 </script>
 
-<style scoped></style>
+<style scoped>
+.icon {
+    padding: 5px;
+}
+</style>
