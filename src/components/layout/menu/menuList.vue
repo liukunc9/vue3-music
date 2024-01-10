@@ -1,7 +1,7 @@
 <template>
     <div class="module-menu">
         <div class="module-menu-brand">
-            <IconPark :icon="MusicOne" class="branc-icon"/>QQ音乐
+            <IconPark :icon="MusicOne" class="branc-icon" />QQ音乐
         </div>
         <div class="module-menu-group" v-for="(item, i) in menus" :key="i">
             <div class="title">
@@ -33,11 +33,11 @@ const menus = useMenu();
 
 .module-menu-brand {
     padding: 20px 20px;
-    color: $bandColor;
+    color: $brandColor;
     font-size: 20px;
 
     .branc-icon {
-        color: #5CC4AA;
+        color: $brandIconColor;
     }
 }
 
@@ -48,8 +48,9 @@ const menus = useMenu();
 .title {
     margin-top: 30px;
     padding-left: 20px;
-    color: #B5B5B5;
+    color: $menuGroupTitleFontColor;
     font-size: 11px;
+    user-select: none; // 禁止文本选中
 }
 
 .menus {
@@ -58,8 +59,6 @@ const menus = useMenu();
     font-size: 13px;
 
     .router-link-active {
-        text-decoration: none;
-
         .menu-item {
             background-color: $selectedMenuBkColor !important;
             color: $selectedFontColor !important;
@@ -73,11 +72,11 @@ const menus = useMenu();
     }
 
     .menu-item:hover {
-        background-color: #E9E9E9;
+        background-color: $hoverMenuBkColor;
     }
 
     a {
-        text-decoration: none;
+        text-decoration: none; // 取消点击之后文本添加下划线
         color: $defaultMenuColor;
     }
 }

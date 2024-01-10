@@ -30,13 +30,14 @@ import Footer from "@components/layout/footer/index.vue";
     .module-top {
         flex-grow: 1;
         display: flex;
+
         .module-top-left {
             min-width: 180px;
             display: flex;
             flex-direction: column;
             background-color: $menuBkColor;
         }
-        
+
         .module-top-right {
             flex-grow: 1;
             background-color: $contentPageBkColor;
