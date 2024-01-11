@@ -3,7 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue"
 import type { Icon } from "@icon-park/vue-next/lib/runtime";
 
 const { icon, size, fill } = defineProps<{

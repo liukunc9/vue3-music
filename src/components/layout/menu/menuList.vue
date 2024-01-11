@@ -35,6 +35,7 @@ const menus = useMenu();
     padding: 20px 20px;
     color: $brandColor;
     font-size: 20px;
+    user-select: none;
 
     .branc-icon {
         color: $brandIconColor;
