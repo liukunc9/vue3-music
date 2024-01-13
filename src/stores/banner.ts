@@ -1,5 +1,5 @@
-import { IBanner } from "@/models/music";
-import { useBanner } from "@/utils/api";
+import { IBanner } from "@/models";
+import { useBanner } from "@/api";
 import { defineStore } from "pinia";
 import { ref } from "vue";
 

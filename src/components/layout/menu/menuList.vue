@@ -44,6 +44,7 @@ const menus = useMenu();
 
 .module-menu-group {
     background-color: $menuBkColor;
+    user-select: none;
 }
 
 .title {

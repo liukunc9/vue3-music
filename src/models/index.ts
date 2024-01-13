@@ -10,3 +10,14 @@ export interface IBanner {
 export interface IDetail {
   code: string; // 图片地址
 }
+
+export interface ISongUrl {
+  id: number;
+  url: string;
+  [propName: string]: any;
+}
+
+export interface ISongSheet {
+  text: string;
+  src: string;
+}

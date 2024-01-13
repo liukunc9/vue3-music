@@ -17,13 +17,13 @@
 .play-song {
   display: flex;
   height: 80px;
+  user-select: none;
 
   .song-img {
     margin-top: 10px;
     cursor: pointer;
     width: 60px;
     height: 60px;
-    // background: url('./../../../assets/default.jpg') no-repeat left top;
     background-color: #413b62;
     background-position: 100% 100%;
   }

@@ -18,10 +18,13 @@
         pauseOnMouseEnter: true, //鼠标进入暂停，离开继续
         disableOnInteraction: false,
       }"
-      @swiper="onSwiper"
     >
       <swiper-slide v-for="item in banners" :key="item.targetId">
-        <img :src="item.pic" class="banner-image" />
+        <img
+          :src="item.pic"
+          class="banner-image"
+          @click="handle(Number(item.targetId))"
+        />
       </swiper-slide>
     </swiper>
   </div>
@@ -29,33 +32,37 @@
 
 <script setup lang="ts">
 import { useBannerStore } from "@/stores/banner";
+import { usePlayerStore } from "@/stores/player";
 import { storeToRefs } from "pinia";
 import { onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination, A11y } from "swiper/modules";
-import { type Swiper as ISwiper } from "swiper/types";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
+
+const modules = [Autoplay, Navigation, Pagination, A11y];
 
 const bannerStore = useBannerStore();
 const { banners } = storeToRefs(bannerStore);
 const { getBanners } = bannerStore;
 
-const modules = [Autoplay, Navigation, Pagination, A11y];
+const playerStore = usePlayerStore();
+const { play } = playerStore;
 
 onMounted(async () => {
   await getBanners();
 });
 
-const onSwiper = (s: ISwiper) => {
-  console.log(s);
-};
+function handle(id: number) {
+  play(id);
+}
 </script>
 
 <style scoped lang="scss">
 .banner {
   padding: 0 40px;
+  min-height: 150px;
   overflow: hidden;
 }
 

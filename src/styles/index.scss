@@ -1,26 +1,29 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    min-width: 1440px;
-    margin: 0;
-    padding: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 1440px;
+  margin: 0;
+  padding: 0;
 }
 
 #app {
-    width: 100vw;
-    height: 100vh;
-    min-width: 1440px;
-    margin: 0;
-    padding: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 1440px;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    width: 1180px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  
-    h1 {
-      margin-left: 30px;
-    }
+  width: 1180px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 588px;
+  overflow: auto;
+
+  h1 {
+    margin-left: 30px;
+    user-select: none;
   }
+}
