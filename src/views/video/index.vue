@@ -1,11 +1,10 @@
 <template>
-    <h1>{{ msg }}</h1>
+  <div class="container">
+    <h1>视频</h1>
+    <Banner />
+  </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from "vue"
+<script setup lang="ts"></script>
 
-const msg = ref('视频')
-</script>
-
-<style scoped></style>
+<style scoped lang="scss"></style>

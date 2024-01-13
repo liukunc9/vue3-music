@@ -32,22 +32,25 @@ import Footer from "@components/layout/footer/index.vue";
         display: flex;
 
         .module-top-left {
-            min-width: 180px;
+            min-width: 200px;
             display: flex;
             flex-direction: column;
             background-color: $menuBkColor;
         }
 
         .module-top-right {
+            min-width: 1240px;
             flex-grow: 1;
             background-color: $contentPageBkColor;
+            display: flex;
         }
     }
 
     .module-bottom {
-        height: 100px;
+        height: 80px;
         background-color: $bottomBkCollor;
         border-top: 1px solid $splitLineColor;
+        display: flex;
     }
 }
 </style>

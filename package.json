@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@icon-park/vue-next": "^1.4.2",
-    "@types/mockjs": "^1.0.10",
     "axios": "^1.6.5",
+    "better-mock": "^0.3.7",
     "pinia": "^2.1.7",
     "swiper": "^11.0.5",
     "vue": "^3.3.11",
