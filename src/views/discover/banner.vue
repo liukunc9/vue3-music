@@ -3,11 +3,16 @@
     <swiper
       :modules="modules"
       :slides-per-view="3"
+      :slides-per-group="1"
       :space-between="50"
       :navigation="{
         enabled: true,
       }"
-      :pagination="{ clickable: true }"
+      :pagination="{
+        clickable: true,
+        type: 'bullets',
+      }"
+      :loop="true"
       :autoplay="{
         delay: 2000,
         pauseOnMouseEnter: true, //鼠标进入暂停，离开继续
@@ -28,6 +33,7 @@ import { storeToRefs } from "pinia";
 import { onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination, A11y } from "swiper/modules";
+import { type Swiper as ISwiper } from "swiper/types";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
@@ -42,8 +48,8 @@ onMounted(async () => {
   await getBanners();
 });
 
-const onSwiper = (swiper) => {
-  console.log(swiper);
+const onSwiper = (s: ISwiper) => {
+  console.log(s);
 };
 </script>
 
