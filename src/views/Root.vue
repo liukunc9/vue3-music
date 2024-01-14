@@ -15,8 +15,8 @@
 </template>
 
 <script setup lang="ts">
-import Menu from "@components/layout/menu/index.vue";
-import Footer from "@components/layout/footer/index.vue";
+import Menu from "@/components/layout/menu/index.vue";
+import Footer from "@/components/layout/footer/index.vue";
 
 </script>
 

@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { useMenu } from "./useMenu"
-import IconPark from "@components/common/iconPark.vue"
+import IconPark from "@/components/common/iconPark.vue"
 import { MusicOne } from "@icon-park/vue-next";
 const menus = useMenu();
 </script>
