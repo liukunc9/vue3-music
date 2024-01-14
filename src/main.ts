@@ -3,7 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import { createPinia } from "pinia";
 import "./styles/index.scss";
-import "./mock/index.ts";
+
+// 根据环境变量决定是否要开启mockjs
+if (import.meta.env.VITE_MOCK_OPEN == "true") {
+  import("./mock/index.ts");
+}
 
 const app = createApp(App);
 
