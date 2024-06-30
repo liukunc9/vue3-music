@@ -2,7 +2,7 @@
 
 ## 简介
 
-vite + vue3.3 + ts + sass + swiper 实现的仿qq音乐播放器
+vite + vue3.3 + ts + sass 实现的仿qq音乐播放器
 
 ## 展示
 

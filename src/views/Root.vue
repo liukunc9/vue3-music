@@ -32,8 +32,8 @@ import Footer from "@/components/layout/footer/index.vue";
     .module-top {
         position: absolute;
         top: 0;
-        width: 100vw;
-        height: calc(100vh - $bottomHeight);
+        width: 100%;
+        height: calc(100% - $bottomHeight);
 
         .module-top-left {
             position: absolute;

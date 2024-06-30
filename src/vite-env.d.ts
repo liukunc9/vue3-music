@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="node_modules/element-plus/global.d.ts" />
 
 // 在ts中获取智能提示
 interface ImportMetaEnv {
