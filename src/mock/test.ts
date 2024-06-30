@@ -42,7 +42,7 @@ export default {
       code: 0,
       data: {
         id: 1,
-        url: "/SG Wannabe - Wedding.mp3",
+        url: "/music.mp3",
       },
     };
   },

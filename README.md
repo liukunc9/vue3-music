@@ -21,3 +21,6 @@ pnpm install
 pnpm dev
 ```
 
+## 初始化
+
+- 如果想要点击图片播放音乐，需要拷贝一个可播放的 mp3文件，放置到 public 目录下，并更名为 music.mp3
