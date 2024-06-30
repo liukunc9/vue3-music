@@ -12,5 +12,6 @@ if (import.meta.env.VITE_MOCK_OPEN == "true") {
 const app = createApp(App);
 
 app.use(router);
-app.mount("#app");
 app.use(createPinia());
+
+app.mount("#app");

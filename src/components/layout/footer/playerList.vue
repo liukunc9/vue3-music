@@ -1,6 +1,6 @@
 <template>
     <div class="player-list">
-        <IconPark :icon="MusicList" size="20" style="margin-top: 25px;"/>
+        <IconPark :icon="MusicList" size="20" style="margin-top: 25px;" />
     </div>
 </template>
 
@@ -15,5 +15,9 @@ import IconPark from "@/components/common/iconPark.vue";
     height: 80px;
     display: flex;
     flex-direction: row-reverse;
+
+    .i-icon {
+        cursor: pointer;
+    }
 }
 </style>

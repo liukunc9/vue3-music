@@ -20,30 +20,34 @@ import PlayerList from "./playerList.vue";
 
 <style scoped>
 .module-player {
-  width: 1440px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   position: relative;
-  margin: 0 auto;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
 
   .player-left {
     position: absolute;
+    left: 0;
     margin-left: 20px;
     width: 350px;
-    height: 80px;
+    height: 100%;
   }
 
   .player-mid {
-    position: absolute;
+    position: relative;
     width: 380px;
-    height: 80px;
-    margin-left: 540px;
+    height: 100%;
+    margin: 0 auto;
   }
 
   .player-right {
     position: absolute;
+    right: 0;
     width: 340px;
-    height: 80px;
-    margin-left: 1100px;
+    height: 100%;
+    margin-right: 20px;
   }
 }
 </style>

@@ -22,34 +22,44 @@ import Footer from "@/components/layout/footer/index.vue";
 
 <style scoped lang="scss">
 .module {
+    min-width: 1440px;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
 
     .module-top {
-        flex-grow: 1;
-        display: flex;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: calc(100vh - $bottomHeight);
 
         .module-top-left {
-            min-width: 200px;
-            display: flex;
-            flex-direction: column;
+            position: absolute;
+            left: 0;
+            width: $menuHeight;
+            height: 100%;
             background-color: $menuBkColor;
         }
 
         .module-top-right {
-            min-width: 1240px;
-            flex-grow: 1;
+            position: absolute;
+            right: 0;
+            width: calc(100% - $menuHeight);
+            height: 100%;
             background-color: $contentPageBkColor;
-            display: flex;
         }
     }
 
     .module-bottom {
-        height: 80px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: $bottomHeight;
         background-color: $bottomBkCollor;
         border-top: 1px solid $splitLineColor;
+        box-sizing: border-box;
         display: flex;
     }
 }

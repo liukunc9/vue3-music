@@ -34,11 +34,13 @@ const playIcon = computed(() => {
 
 <style scoped lang="scss">
 .player-controller {
+  height: 100%;
   margin-top: 10px;
   margin-left: 80px;
 
   .i-icon {
     margin-right: 10px;
+    cursor: pointer;
   }
 }
 </style>
