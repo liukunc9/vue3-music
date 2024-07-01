@@ -3,7 +3,12 @@
     <el-carousel :interval="4000" type="card">
       <el-carousel-item v-for="item in banners" :key="item.targetId">
         <div class="img-container">
-          <img :src="item.pic" alt="avatar" class="banner-image" @click="handle(Number(item.targetId))">
+          <img
+            :src="item.pic"
+            alt="avatar"
+            class="banner-image"
+            @click="handle(Number(item.targetId))"
+          />
         </div>
       </el-carousel-item>
     </el-carousel>
@@ -36,7 +41,7 @@ function handle(id: number) {
 .banner {
   padding: 0 40px;
 
-  $carouselItemHeight: 300px;
+  $carouselItemHeight: 250px;
   .el-carousel {
     height: $carouselItemHeight;
 
@@ -47,20 +52,14 @@ function handle(id: number) {
         height: $carouselItemHeight;
         display: flex;
         justify-content: center;
+        align-items: center;
 
         img {
-          height: $carouselItemHeight;
+          width: calc(1080 * ($carouselItemHeight - 20px) / 420px);
+          height: calc($carouselItemHeight - 20px);
         }
       }
     }
-
-    // .el-carousel__item:nth-child(2n) {
-    //   background-color: #99a9bf;
-    // }
-
-    // .el-carousel__item:nth-child(2n + 1) {
-    //   background-color: #d3dce6;
-    // }
   }
 }
 </style>
